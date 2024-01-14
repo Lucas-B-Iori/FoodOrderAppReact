@@ -75,6 +75,9 @@ const Modal = forwardRef(function Modal({}, ref) {
 
     function handleSumbitCart() {
         handleAddCustomer(formInfos)
+        postOrders({ order: {
+            items: orders, customer: formInfos
+        } })
         handleCloseModal()
         handleFinishOrder()
     }

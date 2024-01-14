@@ -12,4 +12,6 @@ export async function postOrders(data) {
         },
         body: JSON.stringify(data)
     })
+    const resData = await response.json()
+    return resData
 }
